@@ -22,3 +22,12 @@ functionality is facilitated by mailgen and twilio, respectively.
 
 PDF contracts can be generated using customer information. This will
 be facilitated by PDFKit.
+
+Data points:
+- customers
+  - address
+  - contracts
+  - payments
+  - referrals (using 'referred by')
+  - phone
+  - email
