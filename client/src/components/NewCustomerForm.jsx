@@ -1,16 +1,29 @@
 import React, { useState, useEffect } from 'react'
 import  { useForm } from 'react-hook-form'
+import axios from 'axios'
 
-export default function NewCustomerForm() {
+export default function NewCustomerForm({ updateClients, showForm }) {
   const { reset, register, handleSubmit, watch, formState: { errors } } = useForm();
 
-  const onSubmit = (data) => {
+  const addClient = data => {
+    axios.post('/clients', data)
+  }
+
+  const onSubmit = data => {
     console.log(data);
+    updateClients(data);
+    addClient(data);
     reset();
+    showForm(false);
   }
 
   return (
     /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
+    <span className="modal-background">
+    <div className="modal-wrapper">
+    <h2 className="form-header">Add Client</h2>
+    <button className="close-form" onClick={() => showForm(false)}>X</button>
+
     <form onSubmit={handleSubmit(onSubmit)}>
       {/* register your input into the hook by invoking the "register" function */}
 
@@ -32,5 +45,7 @@ export default function NewCustomerForm() {
 
       <input type="submit" />
     </form>
+    </div>
+    </span>
   );
 }

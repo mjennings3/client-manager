@@ -31,3 +31,9 @@ Data points:
   - referrals (using 'referred by')
   - phone
   - email
+
+
+TO DO:
+ - enable DELETE such that the desired item is deleted
+ - enable DELETE for just-added items without refresh (no access to client_id yet because not pulling from database, and it's assigned upon entry) (get last id of table?)
+ - optimize removeFromClients in App.jsx (binary search?)
