@@ -50,7 +50,7 @@ export default function App() {
 
   return (
     <>
-    <h1>Splendid Window Cleaning</h1>
+    {/* <h1>Splendid Window Cleaning</h1> */}
     <>
     <button onClick={() => showForm(true)}>Create new client</button>
     <button onClick={() => setDeleteButtons(!deleteButtons)}>{deleteButtons ? 'Add Jobs' : 'Delete Clients'}</button>

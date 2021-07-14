@@ -38,6 +38,7 @@
     "@babel/preset-react": "^7.14.5",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.2.6",
+    "image-webpack-loader": "^7.0.1",
     "nodemon": "^2.0.9",
     "style-loader": "^3.0.0",
     "webpack": "^5.42.0",

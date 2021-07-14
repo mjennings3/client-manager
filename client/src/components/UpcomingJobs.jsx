@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import JobEntry from './JobEntry.jsx'
 import axios from 'axios'
 
-export default function UpcomingJobs({ client_id }) {
+export default function UpcomingJobs({ client_id, phone, firstName }) {
   const [jobs, setJobs] = useState([]);
   const [showJobs, setShowJobs] = useState(false);
 
@@ -34,6 +34,9 @@ export default function UpcomingJobs({ client_id }) {
           <JobEntry
             job={job}
             key={key}
+            client_id={client_id}
+            phone={phone}
+            firstName={firstName}
           />
         ))
         :

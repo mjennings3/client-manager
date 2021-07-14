@@ -22,17 +22,26 @@ export default function NewJobForm({ currentClientId, updateJobs, showJob }) {
 
   return (
     <div className="modal-background">
-    <div className="modal-wrapper">
+    <div className="modal-wrapper add-job">
     <h2 className="form-header">Add Job</h2>
     <button className="close-form" onClick={() => showJob(false)}>X</button>
+    <div className="add-job-form">
     <DatePicker
+      className="job-date-picker job-form-input"
       selected={date}
       onChange={(date) => setDate(date)}
       showTimeSelect
       timeIntervals={15}
       dateFormat="P p"
     />
-    <button className="submit-button" onClick={() => onSubmit(date)}>Submit</button>
+    <br/>
+    <select className="job-type-dropdown job-form-input">
+      <option>Free Quote</option>
+      <option>Washing</option>
+      <option>Other</option>
+    </select>
+    <button className="submit-button job-form-input" onClick={() => onSubmit(date)}>Submit</button>
+    </div>
     </div>
     </div>
   );

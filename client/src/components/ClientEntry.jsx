@@ -25,7 +25,11 @@ export default function ClientEntry({ currentClient, showJob, updateCurrentClien
         }
       </td>
       <td className="jobs-td">
-        <UpcomingJobs client_id={client.client_id}/>
+        <UpcomingJobs
+          client_id={client.client_id}
+          phone={client.phone}
+          firstName={client.firstName}
+        />
       </td>
     </tr>
     </>
